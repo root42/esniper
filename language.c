@@ -24,8 +24,25 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <string.h>
 #include <language.h>
 
 static const char *LANGUAGE_STRING[] = {
     FOREACH_LANGUAGE(GENERATE_STRING)
 };
+
+static const enum Language LANGUAGE_ENUM[] = {
+    FOREACH_LANGUAGE( GENERATE_ENUM )
+};
+
+enum Language
+languageFromString( const char* language ) {
+  enum Language lang = UNKNOWN;
+  for( int i = 0; i < NUMBER_OF_LANGUAGES; ++i ) {
+    if( strncmp(LANGUAGE_STRING[ i ], language, strlen( LANGUAGE_STRING[ i ] ) ) == 0 ) {
+      lang = LANGUAGE_ENUM[ i ];
+      break;
+    }
+  }
+  return lang;
+}

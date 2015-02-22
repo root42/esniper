@@ -27,9 +27,12 @@
 #ifndef ESNIPER__LANGUAGE_H
 #define ESNIPER__LANGUAGE_H
 
+#define NUMBER_OF_LANGUAGES 2
+
 #define FOREACH_LANGUAGE(LANG) \
-        LANG(en_EN) \
-        LANG(de_DE) \
+  LANG( UNKNOWN )	       \
+  LANG( en_EN )		       \
+  LANG( de_DE )		       \
 
 #define GENERATE_ENUM(ENUM) ENUM,
 #define GENERATE_STRING(STRING) #STRING,

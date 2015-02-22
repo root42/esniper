@@ -3,9 +3,9 @@ LDADD = @CURLLIBS@
 
 bin_PROGRAMS = esniper
 esniper_SOURCES = auction.c auctionfile.c auctioninfo.c buffer.c esniper.c \
-		history.c html.c http.c options.c util.c \
+		history.c html.c http.c options.c util.c language.c \
 		auction.h auctionfile.h auctioninfo.h buffer.h esniper.h history.h \
-		html.h http.h options.h util.h
+		html.h http.h options.h util.h language.h 
 
 man_MANS = esniper.1
 

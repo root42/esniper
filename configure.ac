@@ -1,5 +1,6 @@
-AC_INIT(esniper.c)
-AM_INIT_AUTOMAKE(esniper,2.31.0)
+AC_INIT([esniper],[2.31.0])
+AC_CONFIG_SRCDIR([esniper.c])
+AM_INIT_AUTOMAKE
 AC_PROG_CC
 AC_PROG_MAKE_SET
 

@@ -27,35 +27,37 @@
 #ifndef ESNIPER_H_INCLUDED
 #define ESNIPER_H_INCLUDED
 
+#include "language.h"
 #include "options.h"
 #include "util.h"
 
 /* this structure holds all values from command line or config entries */
 typedef struct {
-	char *username;
-	char *usernameEscape;	/* URL escaped */
-	char *password;
-	int bidtime;
-	int quantity;
-	char *conffilename;
-	char *auctfilename;
-	int bid;
-	int reduce;
-	int debug;
-	int usage;
-	int info;
-	int myitems;
-	int batch;
-	int encrypted;
-	char *proxy;
-	char *logdir;
-	char *historyHost;
-	char *prebidHost;
-	char *bidHost;
-	char *loginHost;
-	char *myeBayHost;
-	int curldebug;
-	int delay;
+  char *username;
+  char *usernameEscape;	/* URL escaped */
+  char *password;
+  int bidtime;
+  int quantity;
+  char *conffilename;
+  char *auctfilename;
+  int bid;
+  int reduce;
+  int debug;
+  int usage;
+  int info;
+  int myitems;
+  int batch;
+  int encrypted;
+  char *proxy;
+  char *logdir;
+  char *historyHost;
+  char *prebidHost;
+  char *bidHost;
+  char *loginHost;
+  char *myeBayHost;
+  int curldebug;
+  int delay;
+  enum Language language;
 } option_t;
 
 extern option_t options;

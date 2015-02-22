@@ -94,7 +94,8 @@ option_t options = {
 	NULL,		/* loginHost */
 	NULL,		/* bidHost */
 	0,		/* curldebug */
-	2      /* delay */
+	2,      /* delay */
+	en_EN           /* language */
 };
 
 /* used for option table */
@@ -151,6 +152,7 @@ optionTable_t optiontab[] = {
    {"bidHost", NULL, (void*)&options.bidHost,      OPTION_STRING,  LOG_NORMAL, NULL, 0},
    {"loginHost",NULL,(void*)&options.loginHost,    OPTION_STRING,  LOG_NORMAL, NULL, 0},
    {"myeBayHost",NULL,(void*)&options.myeBayHost,  OPTION_STRING,  LOG_NORMAL, NULL, 0},
+   {"language", NULL, (void*)&options.language,    OPTION_STRING,  LOG_NORMAL, NULL, 0},
    {"delay",    "D", (void*)&options.delay,        OPTION_INT,     LOG_NORMAL, NULL, 0},
    {NULL,       "?", (void*)&options.usage,        OPTION_BOOL,    LOG_NORMAL, NULL, 0},
    {NULL,       "h", (void*)&options.usage,        OPTION_BOOL,    LOG_NORMAL, SetLongHelp, 0},
